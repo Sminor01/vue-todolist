@@ -1,5 +1,5 @@
 <template>
-    <li>
+    <div class="task">
       <input
         type="checkbox"
         :checked="task.completed"
@@ -10,7 +10,7 @@
       </span>
       <button @click="editTask(task.id)">Редактировать</button>
       <button @click="deleteTask(task.id)">Удалить</button>
-    </li>
+    </div>
   </template>
   
   <script>
@@ -57,5 +57,10 @@
   <style>
   .completed {
     text-decoration: line-through;
+  }
+  .task {
+    width: 200px;
+    max-width: fit-content;
+    border: 1px solid black
   }
   </style>
