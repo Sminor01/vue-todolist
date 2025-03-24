@@ -1,5 +1,10 @@
 <template>
-    <div class="task">
+  <div class="task">
+    <div class="task-bnt">
+      <button @click="editTask(task.id)">Редактировать</button>
+      <button @click="deleteTask(task.id)">Удалить</button>
+    </div>
+    <div class="task-line">
       <input
         type="checkbox"
         :checked="task.completed"
@@ -8,14 +13,12 @@
       <span :class="{ completed: task.completed }">
         {{ task.text }}
       </span>
-      <button @click="editTask(task.id)">Редактировать</button>
-      <button @click="deleteTask(task.id)">Удалить</button>
     </div>
-  </template>
-  
-  <script>
+  </div>
+</template>
+
+<script>
   import { ref } from 'vue';
-  
   export default {
     props: {
       task: {
@@ -52,15 +55,28 @@
       };
     }
   };
-  </script>
-  
-  <style>
+</script>
+
+<style>
   .completed {
     text-decoration: line-through;
   }
   .task {
     width: 200px;
     max-width: fit-content;
-    border: 1px solid black
+    border: 1px solid rgb(151, 151, 151);
+    background-color: rgb(206, 206, 206);
+    border-radius: 10px;
+    margin-bottom: 15px;
   }
-  </style>
+  .task-bnt {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+    gap: 10px;
+  }
+  .task-line {
+    padding: 10px;
+  }
+</style>
