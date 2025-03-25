@@ -62,12 +62,16 @@
     text-decoration: line-through;
   }
   .task {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 200px;
     max-width: fit-content;
     border: 1px solid rgb(151, 151, 151);
     background-color: rgb(206, 206, 206);
     border-radius: 10px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
   }
   .task-bnt {
     display: flex;

@@ -1,7 +1,9 @@
 <template>
   <div>
-    <input v-model="newTaskText" @keyup.enter="addTask" placeholder="Добавить задачу" />
-    <button @click="addTask">Добавить</button>
+    <div class="task-addline">
+      <input v-model="newTaskText" @keyup.enter="addTask" placeholder="Добавить задачу" />
+      <button @click="addTask">Добавить</button>
+    </div>
     <div class="task-block">
       <TaskItem
         v-for="task in tasks"
@@ -62,7 +64,14 @@ export default {
 </script>
 
 <style>
+  .task-addline {
+    margin-bottom: 10px;
+  }
   .task-block {
-    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 10px;
   }
 </style>

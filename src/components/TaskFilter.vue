@@ -24,15 +24,11 @@ export default {
 <style>
   .bnt-group {
     padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    width: auto;
+    height: auto;
   }
-  .bntAll {
-    padding: 10px;
-  }
-  .bntACtive{
-    padding: 10px;
-  }
-  .bntCompleted {
-    padding: 10px
-  }
-
 </style>

@@ -1,15 +1,17 @@
 <template>
   <div id="app">
-    <h1>To-Do List</h1>
-    <TaskFilter @filter="setFilter" />
-    <TaskList :tasks="filteredTasks" @add-task="addTask" @edit-task="editTask" @delete-task="deleteTask" @toggle-task="toggleTask" />
+    <div class="body-app">
+      <h1>To-Do List</h1>
+      <TaskFilter @filter="setFilter" />
+      <TaskList :tasks="filteredTasks" @add-task="addTask" @edit-task="editTask" @delete-task="deleteTask" @toggle-task="toggleTask" />
+    </div>
   </div>
 </template>
 
 <script>
-import { ref, computed, onMounted } from 'vue';
-import TaskList from './components/TaskList.vue';
+import { computed, onMounted, ref } from 'vue';
 import TaskFilter from './components/TaskFilter.vue';
+import TaskList from './components/TaskList.vue';
 
 export default {
   components: {
@@ -96,7 +98,16 @@ export default {
 /* Базовые стили */
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
+}
+
+.body-app {
   text-align: center;
+  border: 1px solid black;
+  background-color: rgb(226, 226, 226);
+  border-radius: 15px;
+  max-width: fit-content;
+  margin-inline: auto;
   margin-top: 60px;
+  box-sizing: border-box;
 }
 </style>
