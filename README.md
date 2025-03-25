@@ -1,6 +1,6 @@
 # vue-todolist
 
-Usuall project 
+Usual project 
 
 ## Recommended IDE Setup
 
