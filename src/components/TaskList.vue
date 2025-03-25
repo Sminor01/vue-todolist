@@ -66,6 +66,10 @@ export default {
 <style>
   .task-addline {
     margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5px;
   }
   .task-block {
     display: flex;
